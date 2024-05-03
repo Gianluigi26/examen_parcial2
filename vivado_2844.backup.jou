@@ -1,0 +1,85 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.1 (64-bit)
+# SW Build 4081461 on Thu Dec 14 12:24:51 MST 2023
+# IP Build 4080415 on Thu Dec 14 21:01:57 MST 2023
+# SharedData Build 4077621 on Mon Dec 11 00:23:44 MST 2023
+# Start of session at: Thu May  2 17:32:46 2024
+# Process ID: 2844
+# Current directory: C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1848 C:\Users\vital\OneDrive\Escritorio\parcial_2\parcial_2\parcial_2.xpr
+# Log file: C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2/vivado.log
+# Journal file: C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2\vivado.jou
+# Running On: DESKTOP-T8AIT0M, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 2, Host memory: 8459 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2/parcial_2.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2/parcial_2.runs/impl_1/top_fsm_example1.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2/parcial_2.runs/impl_1/top_fsm_example1.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2/parcial_2.runs/impl_1/top_fsm_example1.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2/parcial_2.runs/impl_1/top_fsm_example1.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2/parcial_2.runs/impl_1/top_fsm_example1.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/vital/OneDrive/Escritorio/parcial_2/parcial_2/parcial_2.runs/impl_1/top_fsm_example1.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+launch_simulation
+source top_fsm_example1.tcl
+relaunch_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top simulacion_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+relaunch_sim
+close_sim
+launch_simulation
